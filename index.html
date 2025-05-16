@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CYSKY | Offensive Security</title>
+  <link rel="icon" href="https://api.iconify.design/mdi/shield-search.svg?color=cyan&width=32" type="image/svg+xml">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <style>
+    header {
+      transition: background-color .3s, box-shadow .3s;
+    }
+    header.scrolled {
+      background-color: #0f172a; /* slate-900 */
+      box-shadow: 0 2px 12px rgba(0,0,0,.6);
+    }
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans selection:bg-cyan-400 selection:text-slate-900 scroll-smooth">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 w-full z-50">
+    <nav class="container mx-auto flex justify-between items-center px-6 py-4">
+      <a href="#hero" class="flex items-center text-cyan-400 font-extrabold text-2xl">
+        <img src="https://api.iconify.design/mdi/shield-search.svg?color=cyan&width=32" class="inline mr-2" alt="logo" />
+        CYSKY
+      </a>
+      <ul class="hidden md:flex space-x-8 font-semibold text-slate-300">
+        <li><a href="#services" class="hover:text-cyan-400 transition">Services</a></li>
+        <li><a href="#achievements" class="hover:text-cyan-400 transition">Achievements</a></li>
+        <li><a href="#about" class="hover:text-cyan-400 transition">About</a></li>
+        <li><a href="#contact" class="hover:text-cyan-400 transition">Contact</a></li>
+      </ul>
+      <button id="menu-btn" class="md:hidden focus:outline-none">
+        <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" >
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden bg-slate-800 text-slate-300 md:hidden">
+      <ul class="flex flex-col space-y-4 p-4 font-semibold">
+        <li><a href="#services" class="block hover:text-cyan-400 transition">Services</a></li>
+        <li><a href="#achievements" class="block hover:text-cyan-400 transition">Achievements</a></li>
+        <li><a href="#about" class="block hover:text-cyan-400 transition">About</a></li>
+        <li><a href="#contact" class="block hover:text-cyan-400 transition">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative h-screen flex flex-col justify-center items-center text-center px-6 pt-16 overflow-hidden">
+    <!-- animated background shapes -->
+    <div class="absolute inset-0 -z-10 animate-pulse bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-indigo-500/10 blur-3xl"></div>
+    <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight max-w-5xl" data-aos="fade-down">
+      Hack Smarter.<br class="hidden md:block"/> Defend Stronger.
+    </h1>
+    <p class="max-w-3xl text-lg md:text-xl text-slate-300 mb-10" data-aos="fade-up" data-aos-delay="100">
+      CYSKY is a top-tier offensive security team specializing in manual web penetration testing, ongoing reconnaissance, and swift vulnerability assessment to ensure your product is secure and reliable.
+    </p>
+    <a href="#contact" class="bg-cyan-400 text-slate-900 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-300 transition" data-aos="zoom-in" data-aos-delay="200">Request a Free Scoping Call</a>
+  </section>
+
+  <!-- Services Section -->
+<section id="services" class="py-24 bg-slate-800">
+  <div class="container mx-auto px-6 max-w-6xl">
+    <h2 class="text-4xl font-bold mb-12 text-center text-white" data-aos="fade-up">What We Offer</h2>
+    <div class="grid md:grid-cols-3 gap-12">
+      
+      <!-- Card 1 -->
+      <div class="bg-slate-900 p-8 rounded-2xl shadow-lg hover:shadow-cyan-500/40 transition-transform hover:-translate-y-2 duration-300" data-aos="fade-up-right">
+        <svg class="w-12 h-12 mb-4 text-cyan-400" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+          <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+          <circle cx="8.5" cy="7" r="4"></circle>
+          <path d="M20 8v6M23 11h-6"></path>
+        </svg>
+        <h3 class="text-xl font-semibold mb-3 text-white">Web App Penetration Testing</h3>
+        <p class="text-slate-300 leading-relaxed">
+          Advanced manual testing covering OWASP Top 10, complex logic flaws, and modern client-side attack vectors.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-slate-900 p-8 rounded-2xl shadow-lg hover:shadow-cyan-500/40 transition-transform hover:-translate-y-2 duration-300" data-aos="zoom-in">
+        <svg class="w-12 h-12 mb-4 text-cyan-400" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="3"></circle>
+          <circle cx="12" cy="12" r="8"></circle>
+          <line x1="12" y1="12" x2="12" y2="2"></line>
+        </svg>
+        <h3 class="text-xl font-semibold mb-3 text-white">Recon-as-a-Service</h3>
+        <p class="text-slate-300 leading-relaxed">
+          Uncover hidden assets, monitor your external attack surface, and receive weekly, actionable threat intelligence.
+        </p>
+      </div>
+
+      <!-- Card 3 - Vulnerability Reporting Service -->
+<div class="bg-slate-900 p-8 rounded-2xl shadow-lg hover:shadow-cyan-500/40 transition-transform hover:-translate-y-2 duration-300" data-aos="flip-up">
+  <svg class="w-12 h-12 mb-4 text-cyan-400" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+    <path d="M9 12h6M9 16h6M13 8h-1M4 6a2 2 0 012-2h12a2 2 0 012 2v14l-4-4H6a2 2 0 01-2-2V6z" />
+  </svg>
+  <h3 class="text-xl font-semibold mb-3 text-white">Professional Report Writing</h3>
+  <p class="text-slate-300 leading-relaxed">
+    We craft clear, actionable, and professional vulnerability reports tailored for security teams — including risk ratings, PoCs, and remediation steps.
+  </p>
+</div>
+
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Achievements Section -->
+ <section id="achievements" class="py-24 bg-slate-900 relative">
+  <div class="container mx-auto px-6 max-w-6xl text-center">
+    <h2 class="text-4xl font-bold mb-12 text-cyan-400">Hall of Fame</h2>
+    <p class="mb-16 text-slate-300 max-w-xl mx-auto">Companies where we found security vulnerabilities during our bug bounty journey.</p>
+
+    <div id="logo-carousel">
+  <div class="scroll-track">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/SpaceX-Logo.svg" alt="SpaceX">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Grammarly_logo.svg/1280px-Grammarly_logo.svg.png" alt="Grammarly">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Vodafone_2017_logo.svg/2560px-Vodafone_2017_logo.svg.png" alt="Vodafone">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Mozilla_logo_%282017%E2%80%932024%29.svg/800px-Mozilla_logo_%282017%E2%80%932024%29.svg.png" alt="Mozilla">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Dell_Logo.svg" alt="Dell">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg" alt="SAP">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRKP8vsj3MfwK1UC9UIOz6BF6o6cRBJ5vNcQ&s" alt="Indeed">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" alt="NASA">
+    <img src="https://upload.wikimedia.org/wikipedia/en/b/bb/Canva_Logo.svg" alt="Canva">
+    <img src="https://www.svgrepo.com/show/342294/tiktok.svg" alt="TikTok">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Cloudflare_Logo.svg" alt="Cloudflare">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Bolt_logo.svg" alt="Bolt" height="40">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/KUCOIN.svg" alt="KuCoin">
+    <img src="https://www.joomladay.fr/images/2020/sponsors/planethoster-logo.svg" alt="PlanetHoster">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Dell_Logo.svg" alt="Dell">
+    <img src="https://altcoinsbox.com/wp-content/uploads/2023/03/full-ImmutableX-logo.webp" alt="Immutable">
+    <img src="https://www.svgrepo.com/show/303155/under-armour-logo.svg" alt="Under Armour">
+
+
+        <!-- Repeat logos again for infinite scroll -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/SpaceX-Logo.svg" alt="SpaceX">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Grammarly_logo.svg/1280px-Grammarly_logo.svg.png" alt="Grammarly">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Vodafone_2017_logo.svg/2560px-Vodafone_2017_logo.svg.png" alt="Vodafone">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Mozilla_logo_%282017%E2%80%932024%29.svg/800px-Mozilla_logo_%282017%E2%80%932024%29.svg.png" alt="Mozilla">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Dell_Logo.svg" alt="Dell">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg" alt="SAP">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRKP8vsj3MfwK1UC9UIOz6BF6o6cRBJ5vNcQ&s" alt="Indeed">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" alt="NASA">
+    <img src="https://upload.wikimedia.org/wikipedia/en/b/bb/Canva_Logo.svg" alt="Canva">
+    <img src="https://www.svgrepo.com/show/342294/tiktok.svg" alt="TikTok">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Cloudflare_Logo.svg" alt="Cloudflare">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Bolt_logo.svg" alt="Bolt" height="40">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/KUCOIN.svg" alt="KuCoin">
+    <img src="https://www.joomladay.fr/images/2020/sponsors/planethoster-logo.svg" alt="PlanetHoster">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Dell_Logo.svg" alt="Dell">
+    <img src="https://altcoinsbox.com/wp-content/uploads/2023/03/full-ImmutableX-logo.webp" alt="Immutable">
+    <img src="https://www.svgrepo.com/show/303155/under-armour-logo.svg" alt="Under Armour">
+
+      </div>
+    </div>
+  </div>
+
+  <style>
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+
+  #logo-carousel {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .scroll-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+  }
+
+  .scroll-track img {
+    height: 50px;
+    margin-right: 40px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+  }
+
+  .scroll-track img:hover {
+    filter: grayscale(0%);
+  }
+</style>
+  
+  
+</section>
+
+
+
+
+   <!-- About Section -->
+<section id="about" class="py-24 bg-slate-800">
+  <div class="container mx-auto px-6">
+    <h1 class="text-5xl font-bold mb-6 text-center text-slate-100">About CYSKY</h1>
+    <p class="mb-12 text-lg leading-relaxed text-center max-w-3xl mx-auto text-slate-300">
+     Founded by top-ranked bug hunter 
+<a href="https://bugcrowd.com/cysky0x1" target="_blank" class="text-cyan-400 font-semibold underline hover:text-cyan-300">cysky0x1</a>
+, CYSKY unites elite researchers
+      in web security, cloud misconfigurations, and access-control exploitation.
+    </p>
+
+    <div class="flex flex-col md:flex-row items-center gap-12">
+      <img
+        src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80"
+        alt="Team working"
+        class="rounded-lg shadow-lg max-w-md"
+        data-aos="fade-right"
+      />
+      <div data-aos="fade-left" data-aos-delay="100">
+        <h2 class="text-3xl font-semibold mb-4">Our Mission</h2>
+        <p class="mb-6 leading-relaxed text-slate-300">
+          To provide startups and SaaS businesses with unparalleled security insights—combining automated and manual methods—and helping them defend their digital assets.
+        </p>
+
+        <h2 class="text-3xl font-semibold mb-4">Why Choose Us?</h2>
+        <ul class="list-disc list-inside space-y-2 text-slate-300">
+          <li>Experienced security researchers with deep industry knowledge.</li>
+          <li>Proven track record on Bug Bounty platforms and real-world projects.</li>
+          <li>Dedicated to responsible disclosure and client success.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+  <!-- Contact Section -->
+  <section id="contact" class="py-24 px-6">
+    <div class="container mx-auto max-w-xl bg-slate-800 rounded-2xl p-10 shadow-lg" data-aos="zoom-in">
+      <h2 class="text-3xl font-bold mb-6 text-center">Let’s Talk Security</h2>
+      <form action="https://formspree.io/f/mwpoagnz" method="POST" class="space-y-6">
+        <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-3 rounded bg-slate-900 border border-slate-700 text-slate-100 focus:outline-none focus:ring-2 focus:ring-cyan-400" />
+        <input type="email" name="email" placeholder="Your Email" required class="w-full px-4 py-3 rounded bg-slate-900 border border-slate-700 text-slate-100 focus:outline-none focus:ring-2 focus:ring-cyan-400" />
+        <textarea name="message" rows="5" placeholder="Your Message" required class="w-full px-4 py-3 rounded bg-slate-900 border border-slate-700 text-slate-100 focus:outline-none focus:ring-2 focus:ring-cyan-400"></textarea>
+        <button type="submit" class="w-full bg-cyan-400 text-slate-900 font-bold py-3 rounded hover:bg-cyan-300 transition">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 py-10 text-slate-400 text-center text-sm">
+    <p>© 2025 CYSKY. All rights reserved.</p>
+    <p class="mt-2">
+      Follow us:
+      <a href="https://x.com/cysky0x1" class="text-cyan-400 hover:underline ml-2">Twitter</a> ·
+
+      <a href="https://www.linkedin.com/in/cysky0x1/" class="text-cyan-400 hover:underline ml-2">LinkedIn</a>
+    </p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    // Init AOS animations
+    AOS.init({ once: true, duration: 800 });
+
+    // Navbar scroll shadow effect
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
